@@ -19,6 +19,5 @@ function lonelyinteger2(a) {
 const a = [1, 1, 2];
 
 // console.log(`num1: ${num1} // num2: ${num2}`);
+console.log(`answer: ${lonelyinteger(a)}`);
 console.log(`answer: ${lonelyinteger2(a)}`);
-
-a.reduce();

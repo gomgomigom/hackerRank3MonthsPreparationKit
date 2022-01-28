@@ -14,11 +14,14 @@ function lonelyinteger(a) {
 }
 
 function lonelyinteger2(a) {
-  return a.sort().reduce((x, y) => x ^ y);
+  a.sort().reduce((x, y, z) => {
+    console.log(x, y, z);
+    // console.log(x ^ y);
+  });
+  return x, y;
 }
-const a = [1, 1, 2];
+const a = [1, 1, 2, 2, 3];
 
 // console.log(`num1: ${num1} // num2: ${num2}`);
+// console.log(`answer: ${lonelyinteger(a)}`);
 console.log(`answer: ${lonelyinteger2(a)}`);
-
-a.reduce();
