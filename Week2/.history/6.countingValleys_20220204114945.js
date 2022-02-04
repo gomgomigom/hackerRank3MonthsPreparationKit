@@ -7,6 +7,7 @@ function countingValleys(steps, path) {
     pre === -1 && cur === 1 ? countValleys++ : countValleys;
     return pre + cur;
   }, 0);
+  seaLevel;
   return countValleys;
   // write your code here
 }
