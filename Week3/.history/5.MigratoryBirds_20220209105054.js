@@ -9,18 +9,6 @@ function migratoryBirds(arr) {
   return answer;
 }
 
-function migratoryBirds2(arr) {
-  let tally = [];
-  for (let i of arr) {
-    while (i > tally.length - 1) {
-      tally.push(0);
-    }
-    tally[i]++;
-  }
-  return tally.indexOf(Math.max(...tally));
-}
-
 const arr = [1, 4, 4, 4, 5, 3];
 
 console.log(migratoryBirds(arr));
-console.log(migratoryBirds2(arr));

@@ -12,12 +12,10 @@ function migratoryBirds(arr) {
 function migratoryBirds2(arr) {
   let tally = [];
   for (let i of arr) {
-    while (i > tally.length - 1) {
-      tally.push(0);
-    }
-    tally[i]++;
+    while (i > tally.length) tally.push(0);
+    tally[i - 1]++;
   }
-  return tally.indexOf(Math.max(...tally));
+  return tally.indexOf(Math.max(...tally)) + 1;
 }
 
 const arr = [1, 4, 4, 4, 5, 3];

@@ -12,7 +12,7 @@ function migratoryBirds(arr) {
 function migratoryBirds2(arr) {
   let tally = [];
   for (let i of arr) {
-    while (i > tally.length - 1) {
+    while (i > tally.length) {
       tally.push(0);
     }
     tally[i]++;
