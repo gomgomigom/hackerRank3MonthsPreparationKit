@@ -1,0 +1,26 @@
+'use strict';
+
+function getTotalX(a, b) {
+  let result = [];
+  const lowestCommonMultiple = (a) => {
+    let min = 100;
+    for (let i = 0; i < a.length; i++) {
+      let j = 1;
+      while (a[i] * j <= 100) {
+        result.push(a[i] * j);
+        j++;
+      }
+    }
+    return result.reduce((pre, cur) => {
+      console.log(pre);
+      return pre ^ cur;
+    }, 0);
+  };
+  lowestCommonMultiple(a);
+  return result;
+}
+
+const a = [2, 6];
+const b = [24, 36];
+
+console.log(getTotalX(a, b));
