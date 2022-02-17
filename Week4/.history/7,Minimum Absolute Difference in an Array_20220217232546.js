@@ -1,0 +1,13 @@
+'use strict';
+
+function minimumAbsoluteDifference(arr) {
+  let result;
+  let min = Math.MAX_VALUE;
+  console.log(min);
+  return min;
+  // Write your code here
+}
+
+const arr = [3, -7, 0];
+
+console.log(minimumAbsoluteDifference(arr));
