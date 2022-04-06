@@ -3,7 +3,7 @@
 function rotateLeft(d, arr) {
   const rotatedArr = arr.slice(d); // 5
   console.log(rotatedArr);
-  rotatedArr.push(...arr.slice(0, d));
+  rotatedArr.push(arr.slice(0, d));
   return rotatedArr;
 }
 

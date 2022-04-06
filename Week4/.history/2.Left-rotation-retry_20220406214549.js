@@ -1,7 +1,7 @@
 'use strict';
 
 function rotateLeft(d, arr) {
-  const rotatedArr = arr.slice(d); // 5
+  const rotatedArr = arr.slice(d);
   console.log(rotatedArr);
   rotatedArr.push(...arr.slice(0, d));
   return rotatedArr;
