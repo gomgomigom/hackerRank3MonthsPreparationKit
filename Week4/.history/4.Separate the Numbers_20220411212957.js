@@ -17,10 +17,9 @@ function separateNumbers(s) {
     while (result.length < s.length) {
       result += temp;
       temp++;
-      console.log(`after while result: ${result}, temp: ${temp}`);
+      console.log(`result: ${result}, temp: ${temp}`);
     }
     if (result === s) {
-      console.log(result);
       return console.log(`YES ${start}`);
     }
   }

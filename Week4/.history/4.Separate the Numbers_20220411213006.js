@@ -20,7 +20,6 @@ function separateNumbers(s) {
       console.log(`after while result: ${result}, temp: ${temp}`);
     }
     if (result === s) {
-      console.log(result);
       return console.log(`YES ${start}`);
     }
   }

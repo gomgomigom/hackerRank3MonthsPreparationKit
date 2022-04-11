@@ -7,20 +7,15 @@ function separateNumbers(s) {
 
   for (let i = 0; i < mid; i++) {
     start = BigInt(s.slice(0, i + 1), 10);
-    console.log(`start: ${start}, temp: ${temp}`);
+    console.log(start, temp);
     temp = start;
-    console.log(`start: ${start}, temp: ${temp}`);
 
     let result = '';
-    console.log(`before while result: ${result}, temp: ${temp}`);
-
     while (result.length < s.length) {
       result += temp;
       temp++;
-      console.log(`after while result: ${result}, temp: ${temp}`);
     }
     if (result === s) {
-      console.log(result);
       return console.log(`YES ${start}`);
     }
   }

@@ -12,15 +12,15 @@ function separateNumbers(s) {
     console.log(`start: ${start}, temp: ${temp}`);
 
     let result = '';
-    console.log(`before while result: ${result}, temp: ${temp}`);
+    console.log(`result: ${result}`);
 
     while (result.length < s.length) {
       result += temp;
+      console.log(`result: ${result}, temp: ${temp}`);
+
       temp++;
-      console.log(`after while result: ${result}, temp: ${temp}`);
     }
     if (result === s) {
-      console.log(result);
       return console.log(`YES ${start}`);
     }
   }
