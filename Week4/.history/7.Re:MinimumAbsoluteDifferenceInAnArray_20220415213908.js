@@ -9,9 +9,10 @@ function minimumAbsoluteDifference(arr) {
 
   arr.reduce((pre, cur) => {
     console.log(`pre: ${pre}, cur: ${cur}, cur-pre: ${cur - pre}`);
+
     const diff = Math.abs(cur - pre);
     min = Math.min(diff, min);
-    return cur;
+    return min;
   });
 
   return min;

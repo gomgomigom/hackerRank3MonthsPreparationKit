@@ -8,12 +8,11 @@ function minimumAbsoluteDifference(arr) {
   let min = Infinity;
 
   arr.reduce((pre, cur) => {
-    console.log(`pre: ${pre}, cur: ${cur}, cur-pre: ${cur - pre}`);
+    console.log(`pre: ${pre}, cur: ${cur}`);
     const diff = Math.abs(cur - pre);
     min = Math.min(diff, min);
     return cur;
   });
-
   return min;
 }
 

@@ -13,7 +13,6 @@ function minimumAbsoluteDifference(arr) {
     min = Math.min(diff, min);
     return cur;
   });
-
   return min;
 }
 
