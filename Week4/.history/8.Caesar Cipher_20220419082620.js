@@ -14,10 +14,12 @@ function caesarCipher(s, k) {
 
   const result = [...s].reduce((pre, cur) => {
     console.log(`pre: ${pre}  +   cur: ${cur}`);
+    // console.log(regex.test(cur));
     return regex.test(cur) === false //
       ? pre + cur
       : pre + alphabetShift(cur, k);
   }, 0);
+  console.log(result.slice(1));
 
   return result.slice(1);
 }

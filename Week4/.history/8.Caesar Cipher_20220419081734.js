@@ -14,12 +14,18 @@ function caesarCipher(s, k) {
 
   const result = [...s].reduce((pre, cur) => {
     console.log(`pre: ${pre}  +   cur: ${cur}`);
-    return regex.test(cur) === false //
-      ? pre + cur
-      : pre + alphabetShift(cur, k);
+    // console.log(regex.test(cur));
+    if (pre === 0) {
+      return regex.test(cur) === false //
+        ? pre + cur
+        : pre + alphabetShift(cur, k);
+    } else {
+      return regex.test(cur) === false
+        ? pre + cur
+        : pre + alphabetShift(cur, k);
+    }
   }, 0);
-
-  return result.slice(1);
+  return result.shift(1);
 }
 
 const s = 'middle-Outz';

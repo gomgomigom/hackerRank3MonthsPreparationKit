@@ -13,13 +13,18 @@ function caesarCipher(s, k) {
   };
 
   const result = [...s].reduce((pre, cur) => {
-    console.log(`pre: ${pre}  +   cur: ${cur}`);
-    return regex.test(cur) === false //
-      ? pre + cur
-      : pre + alphabetShift(cur, k);
-  }, 0);
-
-  return result.slice(1);
+    console.log(pre);
+    console.log(cur.charCodeAt());
+    console.log(String.fromCharCode());
+    // console.log(`${pre}, ${cur}, ${index}`);
+    // console.log(regex.test(cur));
+    if (regex.test(pre) == false) {
+      return pre + cur;
+    } else {
+      return pre + alphabetShift(cur, k);
+    }
+  });
+  return result;
 }
 
 const s = 'middle-Outz';

@@ -18,6 +18,7 @@ function caesarCipher(s, k) {
       ? pre + cur
       : pre + alphabetShift(cur, k);
   }, 0);
+  console.log(result.slice(1));
 
   return result.slice(1);
 }
