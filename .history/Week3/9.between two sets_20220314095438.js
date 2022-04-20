@@ -42,7 +42,7 @@ const a = [2, 6];
 const b = [24, 36];
 
 let i = 0;
-while (i < 10) {
+while (i < 1) {
   console.log(getTotalX(a, b));
   i++;
 }
