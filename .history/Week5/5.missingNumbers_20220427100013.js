@@ -37,8 +37,7 @@ function missingNumbersUpgrade(arr, brr) {
   const brrMapping = mapping(brr);
   const result = [];
   console.log(arrMapping, brrMapping);
-  Object.keys(brrMapping).forEach((key) => {
-    key in arrMapping ? null : result.push(key);
+  Object.keys(arrMapping).forEach((key) => {
     brrMapping[key] - arrMapping[key] > 0 ? result.push(key) : result;
   });
 

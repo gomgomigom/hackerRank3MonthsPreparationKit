@@ -24,28 +24,34 @@ function missingNumbers(arr, brr) {
   return result;
 }
 
-console.log(missingNumbers([7, 2, 5, 3, 5, 3], [7, 2, 5, 4, 6, 3, 5, 3, 3]));
+console.log(missingNumbers([7, 2, 5, 3, 5, 3], [7, 2, 5, 4, 6, 3, 5, 3]));
 
-function missingNumbersUpgrade(arr, brr) {
-  const mapping = (array) => {
-    return array.reduce((obj, value) => {
-      obj[value] ? obj[value]++ : (obj[value] = 1);
-      return obj;
-    }, {});
-  };
-  const arrMapping = mapping(arr);
-  const brrMapping = mapping(brr);
-  const result = [];
-  console.log(arrMapping, brrMapping);
-  Object.keys(brrMapping).forEach((key) => {
-    key in arrMapping ? null : result.push(key);
-    brrMapping[key] - arrMapping[key] > 0 ? result.push(key) : result;
-  });
+console.clear();
 
-  return result;
-}
+let brr = [5, 2, 2, 5];
+const map = brr.reduce((hash, value) => {
+  console.log(`hash: ${hash}, value: ${value}, hash[value]: ${hash[value]}`);
+  if (hash[value]) {
+    hash[value]++;
+    console.log('hash[value] true');
+  } else {
+    hash[value] = 1;
+    console.log(`hash[value] false ${hash}`);
+  }
+  return hash;
+}, {});
+console.log(map);
 
-const arr = [1, 2];
-const brr = [1, 2, 2];
+console.log(!!{});
 
-console.log(missingNumbersUpgrade(arr, brr));
+let names = ['Alice', 'aaa', 'Bob'];
+let countedNames = names.reduce((allNames, name) => {
+  if (name in allNames) {
+    allNames[name]++;
+  } else {
+    allNames[name] = 1;
+  }
+  return allNames;
+}, {});
+
+console.log(countedNames);

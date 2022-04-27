@@ -24,7 +24,7 @@ function missingNumbers(arr, brr) {
   return result;
 }
 
-console.log(missingNumbers([7, 2, 5, 3, 5, 3], [7, 2, 5, 4, 6, 3, 5, 3, 3]));
+console.log(missingNumbers([7, 2, 5, 3, 5, 3], [7, 2, 5, 4, 6, 3, 5, 3]));
 
 function missingNumbersUpgrade(arr, brr) {
   const mapping = (array) => {
@@ -36,16 +36,15 @@ function missingNumbersUpgrade(arr, brr) {
   const arrMapping = mapping(arr);
   const brrMapping = mapping(brr);
   const result = [];
-  console.log(arrMapping, brrMapping);
-  Object.keys(brrMapping).forEach((key) => {
-    key in arrMapping ? null : result.push(key);
-    brrMapping[key] - arrMapping[key] > 0 ? result.push(key) : result;
-  });
+
+  Object.keys(brrMapping).forEach((key) =>
+    key in arrMapping ? result : result.push(key)
+  );
 
   return result;
 }
 
-const arr = [1, 2];
-const brr = [1, 2, 2];
+const arr = [7, 2, 5, 3, 5, 3];
+const brr = [7, 2, 5, 4, 6, 3, 5, 3, 3, 3];
 
 console.log(missingNumbersUpgrade(arr, brr));

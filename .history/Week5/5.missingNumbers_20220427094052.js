@@ -36,16 +36,17 @@ function missingNumbersUpgrade(arr, brr) {
   const arrMapping = mapping(arr);
   const brrMapping = mapping(brr);
   const result = [];
-  console.log(arrMapping, brrMapping);
-  Object.keys(brrMapping).forEach((key) => {
-    key in arrMapping ? null : result.push(key);
-    brrMapping[key] - arrMapping[key] > 0 ? result.push(key) : result;
-  });
+
+  console.log(arrMapping);
+  Object.keys(brrMapping).forEach((key) =>
+    key in arrMapping ? arrMapping[key] - brrMapping[key] : result.push(key)
+  );
+  console.log(arrMapping);
 
   return result;
 }
 
-const arr = [1, 2];
-const brr = [1, 2, 2];
+const arr = [7, 2, 5, 3, 5, 3];
+const brr = [7, 2, 5, 4, 6, 3, 5, 3, 3];
 
 console.log(missingNumbersUpgrade(arr, brr));
