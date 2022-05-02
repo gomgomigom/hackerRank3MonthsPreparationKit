@@ -19,11 +19,12 @@ console.clear();
 
 let a = ['a', 'b', 'c'];
 let aLen = a.length;
-aLen % 2 === 0 && a.push(a);
-aLen % 2 === 1 &&
-  a.forEach((value, index) => {
-    index % 2 === 1 && a.push(value);
-  });
+const test = a.reduce((pre, cur, index, array) => {
+  console.log(
+    `pre: ${pre} // cur: ${cur} //\nindex: ${index} // array: ${array}\n---`
+  );
+  return pre ^ cur;
+});
 
 console.log(a);
 

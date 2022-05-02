@@ -19,11 +19,13 @@ console.clear();
 
 let a = ['a', 'b', 'c'];
 let aLen = a.length;
-aLen % 2 === 0 && a.push(a);
-aLen % 2 === 1 &&
+if (aLen % 2 === 0) a.push(a);
+if (aLen % 2 === 1)
   a.forEach((value, index) => {
-    index % 2 === 1 && a.push(value);
-  });
+      index % 2 === 1 ? a.push(value) : null;
+      j;
+    })
+  );
 
 console.log(a);
 

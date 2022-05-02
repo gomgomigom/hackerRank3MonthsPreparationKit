@@ -3,18 +3,18 @@
 console.clear();
 
 function sansaXor(arr) {
-  let newArr = [...arr];
-  const arrLen = arr.length;
-  arrLen % 2 === 0 && newArr.push(arr);
-  console.log(newArr);
-  arrLen % 2 === 1 &&
-    arr.forEach((value, index) => index % 2 === 1 && newArr.push(value));
-
+  const newArr = [...arr];
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      newArr.push(arr.slice(i, j + 1));
+      console.log(newArr);
+    }
+  }
   const result = newArr.flat().reduce((pre, cur) => pre ^ cur);
   return result;
 }
 
-console.log(sansaXor([1, 2, 3]));
+console.log(sansaXor([1, 2]));
 console.log(sansaXor([4, 5, 7, 5]));
 
 let a =
@@ -22,38 +22,3 @@ let a =
 
 a = a.split(' ');
 console.log(sansaXor(a));
-
-console.log('---');
-let b = [1, 2, [1, 2]];
-
-let test = b.reduce((pre, cur) => {
-  console.log(`pre: ${pre} //  cur: ${cur} // pre ^ cur: ${pre ^ cur}`);
-  console.log(typeof cur);
-  typeof cur === 'object' ? (cur = cur.reduce((pre, cur) => pre ^ cur)) : null;
-  return pre ^ cur;
-});
-console.log(test);
-console.log(1 ^ 2 ^ 1 ^ 2);
-
-// function sansaXor(arr) {
-//   // const newArr = [...arr];
-//   // for (let i = 0; i < arr.length - 1; i++) {
-//   //   for (let j = i + 1; j < arr.length; j++) {
-//   //     newArr.push(arr.slice(i, j + 1));
-//   //     // console.log(newArr);
-//   //   }
-//   // }
-//   let newArr = [...arr];
-//   const arrLen = arr.length;
-//   arrLen % 2 === 0 && newArr.push(arr);
-//   arrLen % 2 === 1 &&
-//     arr.forEach((value, index) => index % 2 === 1 && newArr.push(value));
-
-//   const result = newArr.reduce((pre, cur) => {
-//     typeof cur === 'object'
-//       ? (cur = cur.reduce((pre, cur) => pre ^ cur))
-//       : null;
-//     return pre ^ cur;
-//   });
-//   return result;
-// }

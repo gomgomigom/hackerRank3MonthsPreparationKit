@@ -17,14 +17,4 @@ console.log(parseInt(0x12));
 
 console.clear();
 
-let a = ['a', 'b', 'c'];
-let aLen = a.length;
-aLen % 2 === 0 && a.push(a);
-aLen % 2 === 1 &&
-  a.forEach((value, index) => {
-    index % 2 === 1 && a.push(value);
-  });
-
-console.log(a);
-
-console.log(1 ^ 7);
+let a = [1, 2, 3];

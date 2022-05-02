@@ -19,11 +19,9 @@ console.clear();
 
 let a = ['a', 'b', 'c'];
 let aLen = a.length;
-aLen % 2 === 0 && a.push(a);
-aLen % 2 === 1 &&
-  a.forEach((value, index) => {
-    index % 2 === 1 && a.push(value);
-  });
+const test = a.map((value, index, array) => {
+  aLen % 2 === 0 ? {} : {};
+});
 
 console.log(a);
 

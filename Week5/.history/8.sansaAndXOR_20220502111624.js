@@ -6,7 +6,7 @@ function sansaXor(arr) {
   let newArr = [...arr];
   const arrLen = arr.length;
   arrLen % 2 === 0 && newArr.push(arr);
-  console.log(newArr);
+  console.log(newArr.push());
   arrLen % 2 === 1 &&
     arr.forEach((value, index) => index % 2 === 1 && newArr.push(value));
 

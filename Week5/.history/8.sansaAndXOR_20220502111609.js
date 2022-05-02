@@ -10,7 +10,7 @@ function sansaXor(arr) {
   arrLen % 2 === 1 &&
     arr.forEach((value, index) => index % 2 === 1 && newArr.push(value));
 
-  const result = newArr.flat().reduce((pre, cur) => pre ^ cur);
+  const result = newArr.reduce((pre, cur) => pre ^ cur);
   return result;
 }
 
