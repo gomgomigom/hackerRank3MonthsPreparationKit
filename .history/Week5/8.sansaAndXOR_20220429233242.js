@@ -1,0 +1,8 @@
+'use strict';
+
+console.clear();
+
+function sansaXor(arr) {}
+
+console.log(sansaXor(1, 2, 3));
+console.log(sansaXor(4, 5, 7, 5));
