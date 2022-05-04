@@ -35,7 +35,7 @@ function balancedSums2(arr) {
   let right = 0;
   right = arr.reduce((a, b) => a + b);
   // console.log(arr);
-  arr.reduce((pre, cur, index, arr) => {
+  arr.reduce((pre, cur) => {
     // console.log(`pre: ${pre}, cur: ${cur}, index: ${index}`);
     left += pre;
     right -= cur;
