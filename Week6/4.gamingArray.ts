@@ -1,19 +1,8 @@
 function gamingArray(arr: number[]): string | undefined {
-  let i: number = 0;
-  let j: number = 0;
-  const maxArray = [...arr].sort((a, b) => b - a);
-  while (arr.length > 0) {
-    // const maxIndex: number = arr.indexOf(Math.max(...arr));
-    // console.log(arr);
-    // console.log(maxArray[i]);
-    const index = arr.indexOf(maxArray[i + j]);
-    console.log(index);
-    if (index >= 0) {
-      arr.splice(index);
-      i++;
-    } else j++;
-  }
-  return i % 2 === 1 ? 'BOB' : 'ANDY';
+  let max: number = 0;
+  let move: number = 0;
+  arr.forEach((value) => (value > max ? ((max = value), move++) : null));
+  return move % 2 === 1 ? 'BOB' : 'ANDY';
 }
 
 console.log(gamingArray([5, 2, 6, 3, 4]));
@@ -48,4 +37,11 @@ function stringToNumber(str: string): number[] {
   const numberArray: number[] = [];
   str.split(' ').forEach((value) => numberArray.push(parseInt(value)));
   return numberArray;
+}
+
+function gamingArray3(arr: number[]): string {
+  let m: number = 0;
+  return arr.reduce((c, v) => (v > m ? ((m = v), c + 1) : c), 0) % 2
+    ? 'BOB'
+    : 'ANDY';
 }
