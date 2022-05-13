@@ -7,3 +7,9 @@ function misereNim(s: number[]): string | undefined {
 
 console.log(misereNim([1, 1, 2, 2, 3, 3]));
 console.log(misereNim([1, 1, 1, 1]));
+function gamingArray(arr) {
+  let max = 0;
+  let update = 0;
+  arr.forEach((value) => (value > max ? ((max = value), update++) : null));
+  return update % 2 === 1 ? 'BOB' : 'ANDY';
+}
