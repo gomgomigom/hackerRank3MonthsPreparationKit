@@ -17,5 +17,3 @@
   console.log(superDigit('123', 3));
   console.log(superDigit('148', 3));
 }
-
-console.log(Number.parseInt('101010', 2));

@@ -18,4 +18,4 @@
   console.log(superDigit('148', 3));
 }
 
-console.log(Number.parseInt('101010', 2));
+console.log(pareInt(891010, 16));

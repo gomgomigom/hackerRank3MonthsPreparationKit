@@ -7,15 +7,13 @@
 
       return sumResult;
     };
+    console.log(sum(n) * k);
 
-    let start = sum(n) * k;
-    while (start > 9) start = sum(start.toString());
-    return start;
+    // const start: string = (Number.parseInt(sum(n), 10) * k).toString();
+    return 3;
   }
 
   console.log(superDigit('9875', 4));
   console.log(superDigit('123', 3));
   console.log(superDigit('148', 3));
 }
-
-console.log(Number.parseInt('101010', 2));

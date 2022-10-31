@@ -9,13 +9,13 @@
     };
 
     let start = sum(n) * k;
-    while (start > 9) start = sum(start.toString());
+    while (start > 9) start = sum(start);
     return start;
+
+    return 3;
   }
 
   console.log(superDigit('9875', 4));
   console.log(superDigit('123', 3));
   console.log(superDigit('148', 3));
 }
-
-console.log(Number.parseInt('101010', 2));
